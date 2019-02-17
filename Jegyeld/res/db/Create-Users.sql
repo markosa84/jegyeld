@@ -6,7 +6,7 @@ CREATE SEQUENCE users_seq;
 
 CREATE TABLE users (
     user_id         NUMERIC NOT NULL,
-    first_name      VARCHAR(50),
+    first_name      VARCHAR(30),
     last_name       VARCHAR(50),
     address         VARCHAR(100),
     email           VARCHAR(50),
