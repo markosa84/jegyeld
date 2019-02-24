@@ -5,6 +5,6 @@ import java.util.List;
 
 public interface SqlReader<E> {
 
-	List<E> read(ResultSet set);
-	
+    List<E> read(ResultSet resultSet);
+
 }
