@@ -20,7 +20,7 @@ public enum Status {
         return name;
     }
 
-    public Status getByCode(String code) {
+    public static Status getByCode(String code) {
         for (Status status : values()) {
             if (status.getCode()
                     .equals(code)) {

@@ -6,10 +6,10 @@ CREATE SEQUENCE users_seq;
 
 CREATE TABLE users (
     user_id         NUMERIC(20) NOT NULL,
-    first_name      VARCHAR(50),
-    last_name       VARCHAR(50),
-    address         VARCHAR(100),
-    email           VARCHAR(50),
+    first_name      VARCHAR(50) NOT NULL,
+    last_name       VARCHAR(50) NOT NULL,
+    address         VARCHAR(100) NOT NULL,
+    email           VARCHAR(50) NOT NULL,
     phone           VARCHAR(16),
     password        VARCHAR(50) NOT NULL,
     date_of_birth   DATE,
