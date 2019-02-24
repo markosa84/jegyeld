@@ -18,7 +18,7 @@ public class Ticket {
 		this.price = price;
 		this.seatNumber = seatNumber;
 		this.eventId = eventId;
-		this userId = userId;
+		this.userId = userId;
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
 		this.status = status;
@@ -74,7 +74,7 @@ public class Ticket {
 			return this;
 		}
 
-		public Build build() {
+		public Ticket build() {
 			validate();
 			return new Ticket(id, price, seatNumber, eventId, userId, createdAt, updatedAt, status);
 		}
@@ -190,5 +190,4 @@ public class Ticket {
 		builder.append(status);
 		return builder.toString();
 	}
-
 }

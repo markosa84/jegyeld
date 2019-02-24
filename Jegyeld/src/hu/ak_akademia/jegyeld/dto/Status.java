@@ -20,4 +20,14 @@ public enum Status {
 		return name;
 	}
 
+	public Status getByCode(String code) {
+		for (Status status : values()) {
+			if (status.getCode()
+					.equals(code)) {
+				return status;
+			}
+		}
+		throw new IllegalArgumentException("Érvénytelen státuszkód: " + code);
+	}
+
 }
