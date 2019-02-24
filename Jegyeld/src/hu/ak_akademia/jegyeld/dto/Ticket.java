@@ -33,75 +33,76 @@ public class Ticket {
 		private Date createdAt;
 		private Date updatedAt;
 		private Status status;
-	}
 
-	public Builder id(int id) {
-		this.id = id;
-		return this;
-	}
-
-	public Builder price(int price) {
-		this.price = price;
-		return this;
-	}
-
-	public Builder seatNumber(int seatNumber) {
-		this.seatNumber = seatNumber;
-		return this;
-	}
-
-	public Builder eventId(int eventId) {
-		this.eventId = eventId;
-		return this;
-	}
-
-	public Builder userId(int userId) {
-		this.userId = userId;
-		return this;
-	}
-
-	public Builder createdAt(Date createdAt) {
-		this.createdAt = createdAt;
-		return this;
-	}
-
-	public Builder updatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
-		return this;
-	}
-
-	public Builder status(Status status) {
-		this.status = status;
-		return this;
-	}
-
-	public Build build() {
-		validate();
-		return new Ticket(id, price, seatNumber, eventId, userId, createdAt, updatedAt, status);
-	}
-
-	private void validate() {
-		if (id <= 0) {
-			throw new IllegalArgumentException("A jegy azonosítójának minimum 1-el kell kezdődnie!");
+		public Builder id(int id) {
+			this.id = id;
+			return this;
 		}
-		if (price == 0) {
-			throw new IllegalArgumentException("A jegy árának megadása kötelező!");
+
+		public Builder price(int price) {
+			this.price = price;
+			return this;
 		}
-		if (seatNumber <= 0) {
-			throw new IllegalArgumentException("Minimum 1 ülőhelyet ki kell választania!");
+
+		public Builder seatNumber(int seatNumber) {
+			this.seatNumber = seatNumber;
+			return this;
 		}
-		if (eventId <= 0) {
-			throw new IllegalArgumentException("Kötelező kiválasztania egy eseményt");
+
+		public Builder eventId(int eventId) {
+			this.eventId = eventId;
+			return this;
 		}
-		if (userId <= 0) {
-			throw new IllegalArgumentException("A felhasználó azonosítója nem lehet 1-nél kisebb!");
+
+		public Builder userId(int userId) {
+			this.userId = userId;
+			return this;
 		}
-		if (createdAt == null || updatedAt == null) {
-			throw new IllegalArgumentException("A jegy létrehozása és frissítése mezőt kötelező kitöltenie!");
+
+		public Builder createdAt(Date createdAt) {
+			this.createdAt = createdAt;
+			return this;
 		}
-		if (status == null) {
-			throw new IllegalArgumentException("Kötelező megadnia a jegy státuszát!");
+
+		public Builder updatedAt(Date updatedAt) {
+			this.updatedAt = updatedAt;
+			return this;
 		}
+
+		public Builder status(Status status) {
+			this.status = status;
+			return this;
+		}
+
+		public Build build() {
+			validate();
+			return new Ticket(id, price, seatNumber, eventId, userId, createdAt, updatedAt, status);
+		}
+
+		private void validate() {
+			if (id <= 0) {
+				throw new IllegalArgumentException("A jegy azonosítójának minimum 1-el kell kezdődnie!");
+			}
+			if (price == 0) {
+				throw new IllegalArgumentException("A jegy árának megadása kötelező!");
+			}
+			if (seatNumber <= 0) {
+				throw new IllegalArgumentException("Minimum 1 ülőhelyet ki kell választania!");
+			}
+			if (eventId <= 0) {
+				throw new IllegalArgumentException("Kötelező kiválasztania egy eseményt");
+			}
+			if (userId <= 0) {
+				throw new IllegalArgumentException("A felhasználó azonosítója nem lehet 1-nél kisebb!");
+			}
+			if (createdAt == null || updatedAt == null) {
+				throw new IllegalArgumentException("A jegy létrehozása és frissítése mezőt kötelező kitöltenie!");
+			}
+			if (status == null) {
+				throw new IllegalArgumentException("Kötelező megadnia a jegy státuszát!");
+			}
+		}
+
 	}
 
 	public int getId() {
