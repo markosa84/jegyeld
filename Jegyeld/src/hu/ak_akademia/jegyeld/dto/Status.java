@@ -8,7 +8,7 @@ public enum Status {
 	private String name;
 
 	private Status(String code, String name) {
-		this.code  = code;
+		this.code   = code;
 		this.name = name;
 	}
 
