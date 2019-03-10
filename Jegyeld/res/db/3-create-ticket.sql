@@ -6,9 +6,9 @@ CREATE SEQUENCE ticket_seq;
 
 CREATE TABLE ticket (
     ticket_id     NUMERIC(20) NOT NULL,
-    price         NUMERIC(20),
-    seat_number   NUMERIC(20),
-    event_id      NUMERIC(20),
+    price         NUMERIC(20) NOT NULL,
+    seat_number   NUMERIC(20) NOT NULL,
+    event_id      NUMERIC(20) NOT NULL,
     user_id       NUMERIC(20),
     created_at    TIMESTAMP DEFAULT now() NOT NULL,
     updated_at    TIMESTAMP DEFAULT now() NOT NULL,

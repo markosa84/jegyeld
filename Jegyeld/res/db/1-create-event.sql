@@ -8,7 +8,7 @@ CREATE TABLE event (
     event_id            NUMERIC(20) NOT NULL,
     event_name          VARCHAR(100) NOT NULL,
     event_description   VARCHAR(100),
-    event_location      VARCHAR(100),
+    event_location      VARCHAR(100) NOT NULL,
     image_location      VARCHAR(100),
     event_start         TIMESTAMP NOT NULL,
     event_end           TIMESTAMP NOT NULL,
