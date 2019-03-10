@@ -2,6 +2,7 @@ package hu.ak_akademia.jegyeld.dto;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class User {
 
@@ -196,20 +197,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + (address == null ? 0 : address.hashCode());
-        result = prime * result + (created == null ? 0 : created.hashCode());
-        result = prime * result + (dateOfBirth == null ? 0 : dateOfBirth.hashCode());
-        result = prime * result + (email == null ? 0 : email.hashCode());
-        result = prime * result + (firstName == null ? 0 : firstName.hashCode());
-        result = prime * result + (id == null ? 0 : id.hashCode());
-        result = prime * result + (lastName == null ? 0 : lastName.hashCode());
-        result = prime * result + (password == null ? 0 : password.hashCode());
-        result = prime * result + (phone == null ? 0 : phone.hashCode());
-        result = prime * result + (status == null ? 0 : status.hashCode());
-        result = prime * result + (updated == null ? 0 : updated.hashCode());
-        return result;
+        return Objects.hash(address, created, dateOfBirth, email, firstName, id, lastName, password, phone, status, updated);
     }
 
     @Override
@@ -224,80 +212,9 @@ public class User {
             return false;
         }
         User other = (User) obj;
-        if (address == null) {
-            if (other.address != null) {
-                return false;
-            }
-        } else if (!address.equals(other.address)) {
-            return false;
-        }
-        if (created == null) {
-            if (other.created != null) {
-                return false;
-            }
-        } else if (!created.equals(other.created)) {
-            return false;
-        }
-        if (dateOfBirth == null) {
-            if (other.dateOfBirth != null) {
-                return false;
-            }
-        } else if (!dateOfBirth.equals(other.dateOfBirth)) {
-            return false;
-        }
-        if (email == null) {
-            if (other.email != null) {
-                return false;
-            }
-        } else if (!email.equals(other.email)) {
-            return false;
-        }
-        if (firstName == null) {
-            if (other.firstName != null) {
-                return false;
-            }
-        } else if (!firstName.equals(other.firstName)) {
-            return false;
-        }
-        if (id == null) {
-            if (other.id != null) {
-                return false;
-            }
-        } else if (!id.equals(other.id)) {
-            return false;
-        }
-        if (lastName == null) {
-            if (other.lastName != null) {
-                return false;
-            }
-        } else if (!lastName.equals(other.lastName)) {
-            return false;
-        }
-        if (password == null) {
-            if (other.password != null) {
-                return false;
-            }
-        } else if (!password.equals(other.password)) {
-            return false;
-        }
-        if (phone == null) {
-            if (other.phone != null) {
-                return false;
-            }
-        } else if (!phone.equals(other.phone)) {
-            return false;
-        }
-        if (status != other.status) {
-            return false;
-        }
-        if (updated == null) {
-            if (other.updated != null) {
-                return false;
-            }
-        } else if (!updated.equals(other.updated)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(address, other.address) && Objects.equals(created, other.created) && Objects.equals(dateOfBirth, other.dateOfBirth) && Objects.equals(email, other.email)
+                && Objects.equals(firstName, other.firstName) && Objects.equals(id, other.id) && Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
+                && Objects.equals(phone, other.phone) && status == other.status && Objects.equals(updated, other.updated);
     }
 
     @Override

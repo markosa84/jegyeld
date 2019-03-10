@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 public class SqlUtil {
 
     private SqlUtil() {
-
     }
 
     public static LocalDate toLocalDate(Date date) {
