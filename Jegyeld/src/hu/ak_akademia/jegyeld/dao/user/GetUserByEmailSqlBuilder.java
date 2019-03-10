@@ -3,7 +3,7 @@ package hu.ak_akademia.jegyeld.dao.user;
 import hu.ak_akademia.jegyeld.dao.SqlBuilder;
 import hu.ak_akademia.jegyeld.dto.Status;
 
-public class GetUserByEmailtSqlBuilder implements SqlBuilder {
+public class GetUserByEmailSqlBuilder implements SqlBuilder {
 
     @Override
     public String build() {
