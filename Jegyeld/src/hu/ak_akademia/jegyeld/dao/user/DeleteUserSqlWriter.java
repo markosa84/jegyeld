@@ -7,15 +7,15 @@ import hu.ak_akademia.jegyeld.dao.SqlWriter;
 
 public class DeleteUserSqlWriter implements SqlWriter {
 
-    private final int id;
+	private final int id;
 
-    public DeleteUserSqlWriter(int id) {
-        this.id = id;
-    }
+	public DeleteUserSqlWriter(int id) {
+		this.id = id;
+	}
 
-    @Override
-    public void write(PreparedStatement preparedStatement) throws SQLException {
-        preparedStatement.setInt(1, id);
-    }
+	@Override
+	public void write(PreparedStatement preparedStatement) throws SQLException {
+		preparedStatement.setInt(1, id);
+	}
 
 }

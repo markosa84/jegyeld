@@ -5,14 +5,14 @@ import java.util.List;
 
 public interface DataBaseDao<E> {
 
-    Connection getConnection();
+	Connection getConnection();
 
-    void create(SqlBuilder sqlBuilder, SqlWriter sqlWriter);
+	void create(SqlBuilder sqlBuilder, SqlWriter sqlWriter);
 
-    List<E> read(SqlBuilder sqlBuilder, SqlWriter sqlWriter, SqlReader<E> sqlReader);
+	List<E> read(SqlBuilder sqlBuilder, SqlWriter sqlWriter, SqlReader<E> sqlReader);
 
-    void update(E from, E to);
+	void update(SqlBuilder sqlBuilder, SqlWriter sqlWriter);
 
-    void delete(SqlBuilder sqlBuilder, SqlWriter sqlWriter);
+	void delete(SqlBuilder sqlBuilder, SqlWriter sqlWriter);
 
 }
