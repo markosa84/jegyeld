@@ -11,7 +11,7 @@ CREATE TABLE users (
     address         VARCHAR(100) NOT NULL,
     email           VARCHAR(50) NOT NULL,
     phone           VARCHAR(16),
-    password        VARCHAR(50) NOT NULL,
+    password        CHAR(64) NOT NULL,
     date_of_birth   DATE,
     created_at      TIMESTAMP DEFAULT now() NOT NULL,
     updated_at      TIMESTAMP DEFAULT now() NOT NULL,
