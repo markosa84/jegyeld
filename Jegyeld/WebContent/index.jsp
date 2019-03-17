@@ -1,6 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html>
 <head>
@@ -12,8 +11,7 @@
 		<table width="600" border="0">
 			<tbody>
 				<tr>
-					<td><img src="images/logo.jpg" width="250" height="108"
-						alt="logo" /></td>
+					<td><img src="images/logo.jpg" width="250" height="108" alt="logo" /></td>
 					<td><h1 class="headline">
 							<strong>Az online jegyvásárlás</strong>
 						</h1></td>
@@ -34,10 +32,20 @@
 			<input type="submit" value="Bejelentkezés" />
 		</p>
 	</form>
+
+	<a href="registration.jsp">Regisztráció</a>
+
 	<c:choose>
 		<c:when test="${invalidLogin}">
 			<script>
 				alert('Érvénytelen felhasználónév vagy jelszó!');
+			</script>
+		</c:when>
+	</c:choose>
+	<c:choose>
+		<c:when test="${validRegistrationMessage != null}">
+			<script>
+				alert('${validRegistrationMessage}');
 			</script>
 		</c:when>
 	</c:choose>
